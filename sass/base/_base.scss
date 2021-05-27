@@ -1,0 +1,48 @@
+//initialize the page
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Set the root font size so that all the other fonts can be made relative to this font size*/
+html {
+    /* Since we are overriding the default browser font size by hardcoded value, no matter what 
+    default browser font side is updated by user it will always be 10 px. To avoid this we will
+    make it % of default browrer font size which is 16 px*/
+    font-size: 62.5%;   // 1rem = 10px.  10/16 = 62.5 %
+
+    @include respond(laptop) {
+         font-size: 56.25%;              // 1rem = 9px 9/16 = 56.25%
+    }
+
+    @include respond(laptop-touch) {
+         font-size: 50%;              // 1rem = 8px 8/16 = 50%
+    }
+
+    @include respond(tab-land) {
+         font-size: 43.75%;                 // 1rem = 7px 7/16 = 43.75%
+    }
+    
+    @include respond(tab-port) {
+         font-size: 37.5%;                 // 1rem = 6px 6/16 = 37.5%
+    }
+
+    @include respond(tab-port-small) {
+        font-size: 31.75%;                 // 1rem = 5px 5/16 = 31.75%
+   }
+
+    @include respond(phone) {
+        font-size: 56.25%;                 // 1rem = 5px 5/16 = 31.75%
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;          /*  1 rem = 10px initial html font size  */
+    margin: 0;
+}

@@ -1,0 +1,55 @@
+// .section-main {
+//     //height: 90vh;
+//     width: 100%;
+//     margin: 0;
+//     padding: 0;
+// }
+
+.section-side {
+    width: 8%;
+    height: 200vh;
+    float: left;
+    background-image: linear-gradient(to bottom, $color-gray-light-2 0%, $color-gray-dark 50%, $color-bluegray-dark 100%);
+    @include respond ( phone) {
+        display: none;
+    }
+
+    @include respond( tab-port) {
+        height: 175vh;
+    }
+}
+
+.section-cards {
+    margin: 0;
+    padding: 2rem;
+    width: 92%;
+    height: 100vh;
+    float: left;
+    @include respond ( phone) {
+        top: 6rem;
+        left : 1rem;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    // @include respond( tab-port) {
+    //     height: 80vh;
+    // }
+}
+
+.section-footer {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    visibility: 0;
+    display: none;
+
+    @include respond ( phone) {
+        display: block;
+        visibility: 1;
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        background-image: linear-gradient(to right, $color-bluegray-dark, $color-bluegray-faint);
+    }
+}

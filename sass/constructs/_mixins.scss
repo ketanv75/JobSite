@@ -1,0 +1,52 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//Responsive settings : 
+
+//Breakpoint name is passed to mixin which is based on the screen size. 
+
+// Media queries always respond to 'em' and default browser font.
+//1em = 16px; 
+
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content}; //600px = 600/16 = 37.5 em
+    }
+
+    @if $breakpoint == tab-port-small {
+        @media (max-width: 46.87em) {@content}; //700px = 750/16 = 46.87 em
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 62.5em) {@content}; //1000px = 1000/16 = 62.5em
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) {@content};    //1200px = 1200/16 = 75em
+    }
+
+    @if $breakpoint == laptop-touch {
+        @media (max-width: 84.37em) {@content};    //1350px = 1350/16 = 84.37em
+    } 
+
+    @if $breakpoint == laptop {
+        @media (max-width: 93.75em) {@content};    //1500px = 1500/16 = 93.75em
+    } 
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {@content}; //1800px = 1800/16 = 112.5em
+    }
+}

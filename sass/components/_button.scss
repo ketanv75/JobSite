@@ -1,0 +1,37 @@
+.btn {
+
+    &,                  //Since we might use this class for <button> tag as well, we want to get these properties applied
+                        //to that element as well. <button> dies not have the link and visited psudo classes.
+    &:link,
+    &:visited {
+        display: inline-block;
+        text-decoration: none;
+        padding: 1.2rem 1.2rem;
+        border: none;
+        position: relative;
+        border-radius: 1rem;
+        cursor: pointer;
+        top: 1rem;
+        transition: all .05s;
+        text-align: center;
+    }
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba($color-black, .2); 
+    }
+
+    &:active
+         {
+        outline: none;
+        transform: translateY(.5rem);  
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);  /* x, y, blur, shadow color with opacity */
+    }
+
+    &-black {
+        background-color: $color-bluegray-dark;
+        // #263942;    //to be changed
+        color: $color-white;               
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+}

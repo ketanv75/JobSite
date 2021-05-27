@@ -1,0 +1,95 @@
+.footer {
+    margin: 0;
+    padding: 0;
+    //position: relative;
+    //border: 1px solid red;
+
+    //@include clearfix;
+
+    &__list {
+        list-style: none;
+        &-items {
+            display: inline-block;
+        }
+
+        &-rightcontainer {
+            float: right;
+            //display: block;
+            margin: 0;
+            padding-left: 1rem;
+            //border: 1px solid red;
+        }
+    
+        &-img {
+            margin-top: 1rem;
+            margin-right: .5rem;
+            display: inline-block;
+            //border: 1px solid red;
+
+        }
+    
+        &-dotsbox {
+            float: right;
+            display: block;
+            margin-top: 2rem;
+            //border: 1px solid red;
+    
+            &--dots {
+                height: 8px;
+                width: 8px;
+                border: 1.5px solid $color-white;
+                border-radius: 50%;
+                display: inline-block;
+                margin-left: .5rem;
+            }
+        }
+    }
+
+    &__iconbox {
+        width: 6rem;
+        height: 5rem;
+        padding: 0;
+        margin: 0;
+        //border: 1px solid red;
+        position: relative;
+        //transition: all .5s ease;
+ 
+        &-logobox {
+            @include absCenter;
+            text-align: center;
+        }
+
+        &-icon {
+            color: $color-white;
+            font-size: 2rem;
+            font-weight: 300;
+            padding-top: .3rem;
+            margin: 0 auto;
+            &:active {
+                transform: translateY(.2rem);  
+            }
+        }
+
+        &:hover {
+            background-image: linear-gradient(to top right, $color-bluegray-dark, $color-bluegray-faint);   
+        }
+    }
+
+    &__circle {
+        width: 3rem;
+        height: 3rem;
+        border: 1px solid $color-white;
+        border-radius: 5rem;
+
+        &-link {
+            text-decoration: none;
+        }
+    }
+
+    // &__text {
+    //     color: $color-white;
+    //     padding: 0;
+    //     font-size: 1rem;
+    //     font-weight: 500;
+    // }
+}

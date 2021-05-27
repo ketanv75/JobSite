@@ -1,0 +1,159 @@
+.card {
+    height: 35rem;
+    //background-color: orangered;
+    margin: 0;
+    padding: 0;
+    border-radius: .8rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .25);
+    overflow: hidden;
+    transition: all .5s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__heart {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-white;
+    }
+
+    &__name {
+        font-size: 1.3rem;
+        color: $color-white;
+        font-weight: 500;
+    }
+
+    &__upper {
+        height: 50%;
+        position: relative;
+        
+
+        &-green {
+            background-image: linear-gradient(to right, $color-green-dark, $color-green-light);
+        }
+
+        &-orange {
+            background-image: linear-gradient(to right, $color-orange-dark, $color-orange-light);
+        }
+
+        &-yellow {
+            background-image: linear-gradient(to right, $color-yellow-dark, $color-yellow-light);
+        }
+
+        &-blue {
+            background-image: linear-gradient(to right, $color-blue-dark, $color-blue-light);
+        }
+
+        &-list {
+            padding: 1rem 0 0 1rem;
+            list-style: none;
+        }
+
+        &-items {
+            display: inline-block;
+            &:not(:first-child) {
+                padding-left: 0.5rem;
+            }
+            &:first-child {
+                padding-right: 3rem;
+            }
+        }
+
+        &-close {
+            position: absolute;
+            top: .5rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: $color-white;
+            text-decoration: none;
+        }
+
+        &-jobbox {
+            @include absCenter;
+            top: 55%;
+    
+            width: 70%;
+            height: 45%;
+            border: 2.5px solid $color-white;
+                
+            &--text {
+                color: $color-white;
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding: 0.5rem;
+            }
+        }
+
+        &-jobtype {
+            @include absCenter;
+            top: 95%;
+            width: 90%;
+            padding-bottom: 0.5rem;
+
+            color: $color-white;
+            font-size: 1.3rem;
+            font-weight: 500;
+            
+            &--type {
+                float: left;
+                padding-left: 1rem;
+            }
+
+            &--count {
+                float: right;
+                padding-right: 1rem;
+            }
+        }
+
+    }
+
+    &__lower {
+
+        padding: 1.5rem 2rem 2rem 2rem;
+        //border: 1px solid black;
+
+        &-para {
+            text-align: justify;
+            color: $color-gray-dark;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        &-bold {
+            padding-top: 0.5rem;
+            font-weight: 700;
+            color: $color-black;
+            font-size: 1.3rem;
+        }
+
+        &-deadline {
+            float: left;
+        }
+
+        &-ch {
+            float: right;
+        }
+
+        &-button {
+            width: 100%;
+        }
+
+        &-footer {
+            padding-top: 1.5rem;
+            text-align: center;
+            color: $color-gray-dark;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+
+    @include respond (phone) {
+        height: 35rem;
+        width: 26rem;
+        margin: 0 auto;
+        //border: 1px solid red;
+    }
+}
